@@ -1,0 +1,22 @@
+
+<div class="autoImg-wrapper">
+  <img class="autoImg-D" [src]="car?.imageUrl">
+</div>
+
+<div id="name">
+  <h2>{{car?.name}}</h2>
+</div>
+
+<!--TODO take out the <p> in the unordered list:fix it with margin if need be -->
+<ul>
+  <p id="spec">SPECIFICATIONS</p>
+  <li id="oneL">{{car?.stat1}}</li>
+  <li id="secondL">{{car?.stat2}}</li>
+  <li id="threeL">{{car?.stat3}}</li>
+  <li id="fourL">{{car?.stat4}}</li>
+</ul>
+
+<div id="info">
+  <p class="Pp">{{car?.info}}</p>
+  <button class="btn">Lease Me</button>
+</div>

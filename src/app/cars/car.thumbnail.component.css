@@ -1,0 +1,58 @@
+/*former class tet*/
+
+* {
+  box-sizing: border-box;
+}
+
+.autoImg {
+  width: 600px;
+  height: 425px;
+  display: inline-block;
+}
+
+.forefront {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  float: left;
+  background-color: #262626;
+  text-align: center;
+  margin-left: 8px;
+  font-family: Nunito, sans-serif;
+  margin-bottom: 18px;
+}
+/*.forefront:nth-child(1) {*/
+/*background-color: #ed1c24;*/
+/*}*/
+
+.name {
+  color: #fff784;
+  font-size: 40px;
+  font-family: 'Kaushan Script', sans-serif;
+  margin-bottom: -3px;
+  margin-top: 5px;
+}
+
+button {
+  background-color: dodgerblue;
+  border: none;
+  color: white;
+  padding: 15px 150px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-bottom:20px;
+  font-family: Nunito, sans-serif;
+}
+
+.flash {
+  color: #fff;
+  font-size:20px;
+  text-align: center;
+}
+
+.price {
+  font-size: large;
+}
