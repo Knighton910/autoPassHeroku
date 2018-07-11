@@ -1,7 +1,12 @@
+// Import bugsnag-js and bugsnag-angular
+import BugsnagErrorHandler from 'bugsnag-angular';
+import bugsnag from 'bugsnag-js';
+const bugsnagClient = bugsnag('3e394594fb0a7db35f441cff40553e6e');
+
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
-import {NgModule} from '@angular/core';
+import {NgModule, ErrorHandler} from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {
@@ -24,6 +29,10 @@ import {CarThumbnailComponent } from './cars/car.thumbnail.component';
 import {CarDetailsComponent} from './cars/car-details/car-details.component';
 import {CoverpageComponent} from './coverpage/coverpage.component';
 import {CarService} from './car.service';
+
+export function errorHandlerFactory() {
+  return new BugsnagErrorHandler(bugsnagClient);
+}
 
 @NgModule({
   declarations: [
@@ -53,7 +62,10 @@ import {CarService} from './car.service';
     MatIconModule,
     MatInputModule
   ],
-  providers: [CarService],
+  providers: [
+    CarService,
+    { provide: ErrorHandler, useFactory: errorHandlerFactory}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
